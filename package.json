@@ -1,0 +1,69 @@
+{
+  "name": "@itin-labs/eslint-plugin-worklet-order",
+  "version": "0.0.0",
+  "description": "ESLint rule that catches React Native worklets which capture a variable before it is set, the mistake that crashes on the UI thread.",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "react-native",
+    "reanimated",
+    "worklets",
+    "react-native-worklets"
+  ],
+  "homepage": "https://github.com/ITIN-Labs/eslint-plugin-worklet-order#readme",
+  "bugs": {
+    "url": "https://github.com/ITIN-Labs/eslint-plugin-worklet-order/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITIN-Labs/eslint-plugin-worklet-order.git"
+  },
+  "license": "MIT",
+  "author": "ITIN Labs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22.12"
+  },
+  "peerDependencies": {
+    "eslint": ">=9"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "node --test --experimental-test-coverage --test-coverage-include=\"src/**\" --test-coverage-lines=95 --test-coverage-branches=90 --test-coverage-functions=95 \"test/**/*.test.ts\"",
+    "typecheck": "tsc",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "check:package": "publint --strict && attw --pack . --profile esm-only && size-limit",
+    "changeset": "changeset",
+    "release": "npm test && npm run build && npm run check:package && changeset publish"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@changesets/cli": "^3.0.3",
+    "@eslint/js": "^10.0.1",
+    "@size-limit/file": "^14.3.0",
+    "@types/estree": "^1.0.11",
+    "@types/node": "^24.19.2",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "expect-type": "^1.4.0",
+    "fast-check": "^4.11.0",
+    "prettier": "^3.10.1",
+    "publint": "^0.3.25",
+    "size-limit": "^14.3.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.74.0"
+  }
+}

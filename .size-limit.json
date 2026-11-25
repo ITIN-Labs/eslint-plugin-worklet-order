@@ -1,0 +1,7 @@
+[
+  {
+    "name": "dist",
+    "path": "dist/*.js",
+    "limit": "3.5 kB"
+  }
+]
