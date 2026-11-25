@@ -1,6 +1,6 @@
 {
   "name": "@itin-labs/eslint-plugin-worklet-order",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "ESLint rule that catches React Native worklets which capture a variable before it is set, the mistake that crashes on the UI thread.",
   "keywords": [
     "eslint",
