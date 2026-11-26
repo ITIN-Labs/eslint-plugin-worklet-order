@@ -18,7 +18,7 @@ Hangs and memory use. There are no regular expressions over source text. For eac
 
 False confidence. A missed case lets a crash ship. Defences: the rule follows the Babel plugin's own capture logic, the README lists what it doesn't check, and a differential test runs the real plugin on every test input weekly and checks the rule reports exactly what Babel's output shows. The property-based test only restates the rule's own position logic, so it guards the scope handling, not the model.
 
-Supply chain. No runtime dependencies (ESLint is a peer), a committed lockfile, `npm ci` in CI, `npm audit`, CodeQL, Dependabot, actions pinned to commit SHAs, no install scripts, and publishing through npm trusted publishing with provenance.
+Supply chain. No runtime dependencies (ESLint is a peer), a committed lockfile, `npm ci` in CI, `npm audit`, CodeQL, Dependabot, actions pinned to commit SHAs, no install scripts, and releases staged through npm trusted publishing, so each version goes live only when a maintainer approves it with 2FA.
 
 ## What leaves the machine
 
